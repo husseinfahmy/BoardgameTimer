@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="tech.husseinfahmy.boardgametimer.MainActivity"
+    android:background="#5d5c5c">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/numPlayersField"
+        android:background="#4b58c8"
+        android:layout_alignTop="@+id/numPlayersLabel"
+        android:layout_toRightOf="@+id/numPlayersLabel"
+        android:layout_toEndOf="@+id/numPlayersLabel"
+        android:layout_marginLeft="43dp"
+        android:layout_marginStart="43dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/new_game_timer"
+        android:id="@+id/newTimer"
+        android:layout_marginTop="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/number_of_players"
+        android:id="@+id/numPlayersLabel"
+        android:layout_below="@+id/newTimer"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="45dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/extra_time_bank"
+        android:id="@+id/timeBankLabel"
+        android:layout_below="@+id/numPlayersLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="23dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/time_per_round"
+        android:id="@+id/timePerRoundLabel"
+        android:layout_below="@+id/timeBankLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="69dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/minutes"
+        android:id="@+id/minutesLabel"
+        android:gravity="top|center_vertical"
+        android:layout_below="@+id/timeBankLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/seconds"
+        android:id="@+id/secondsLabel"
+        android:gravity="center_vertical"
+        android:layout_alignBottom="@+id/bankMinsField"
+        android:layout_alignLeft="@+id/numPlayersField"
+        android:layout_alignStart="@+id/numPlayersField" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/bankMinsField"
+        android:background="#4b58c8"
+        android:layout_alignBottom="@+id/minutesLabel"
+        android:layout_alignLeft="@+id/newTimer"
+        android:layout_alignStart="@+id/newTimer"
+        android:layout_toLeftOf="@+id/numPlayersField"
+        android:layout_toStartOf="@+id/numPlayersField" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/bankSecsField"
+        android:background="#4b58c8"
+        android:layout_alignBottom="@+id/secondsLabel"
+        android:layout_toRightOf="@+id/newTimer" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/minutes"
+        android:id="@+id/textView"
+        android:layout_marginTop="23dp"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/timePerRoundLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/seconds"
+        android:id="@+id/textView2"
+        android:gravity="center_vertical"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignLeft="@+id/secondsLabel"
+        android:layout_alignStart="@+id/secondsLabel" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/roundMinsField"
+        android:background="#4b58c8"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_alignLeft="@+id/bankMinsField"
+        android:layout_alignStart="@+id/bankMinsField"
+        android:layout_alignRight="@+id/bankMinsField"
+        android:layout_alignEnd="@+id/bankMinsField" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/roundSecsField"
+        android:layout_alignTop="@+id/roundMinsField"
+        android:layout_alignRight="@+id/bankSecsField"
+        android:layout_alignEnd="@+id/bankSecsField"
+        android:background="#4b58c8"
+        android:layout_alignLeft="@+id/bankSecsField"
+        android:layout_alignStart="@+id/bankSecsField" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_timer"
+        android:id="@+id/startTimerButton"
+        android:layout_marginBottom="25dp"
+        android:layout_alignParentBottom="true"
+        android:background="#4b58c8"
+        android:layout_alignLeft="@+id/roundMinsField"
+        android:layout_alignStart="@+id/roundMinsField"
+        android:layout_toLeftOf="@+id/roundSecsField"
+        android:layout_toStartOf="@+id/roundSecsField" />
+</RelativeLayout>
