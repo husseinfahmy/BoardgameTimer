@@ -1,6 +1,7 @@
 package tech.husseinfahmy.boardgametimer;
 
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -49,6 +50,11 @@ public class MainActivity extends AppCompatActivity {
                             EditText roundSecsField = (EditText) findViewById(R.id.roundSecsField);
                             roundSecs = Integer.parseInt(roundSecsField.getText().toString());
 
+
+                            Intent newIntent =  new Intent(v.getContext(), TimerActivity.class);
+
+
+
                             if ((numPlayers <= 0) || (bankMins < 0) || (bankSecs < 0) ||(roundMins<0)||(roundMins<0)||(roundSecs>59)||(bankSecs>59)) {
                                 Toast errorMessage = Toast.makeText(getApplicationContext(),"Invalid Field(s)",Toast.LENGTH_SHORT);
                                 errorMessage.show();
@@ -57,6 +63,16 @@ public class MainActivity extends AppCompatActivity {
                                 roundTime = (roundMins*60000)+(roundSecs*1000);
                                 bankTime = (bankMins*60000)+(bankSecs*1000);
                             }
+
+                            newIntent.putExtra("numberOfPlayers", numPlayers);
+                            newIntent.putExtra("bankMinutes", bankMins);
+                            newIntent.putExtra("bankSeconds", bankSecs);
+                            newIntent.putExtra("roundMinutes", roundMins);
+                            newIntent.putExtra("roundSeconds", roundSecs);
+                            newIntent.putExtra("bankTime", bankTime);
+                            newIntent.putExtra("roundTime", roundTime);
+
+                            startActivity(newIntent);
                         }catch(NumberFormatException nfe){
                             Toast errorMessage = Toast.makeText(getApplicationContext(),"Invalid Field(s)",Toast.LENGTH_SHORT);
                             errorMessage.show();
