@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
                                 bankTime = (bankMins*60000)+(bankSecs*1000);
                             }
 
+                            Bundle data = new Bundle();
                             newIntent.putExtra("numberOfPlayers", numPlayers);
                             newIntent.putExtra("bankMinutes", bankMins);
                             newIntent.putExtra("bankSeconds", bankSecs);
